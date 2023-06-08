@@ -4,9 +4,12 @@ namespace SalesManagementSystem.Domain.Entities;
 
 public class Venta : EntidadBase
 {
-    public double TotalPesos { get; set; }
-    public DateTimeOffset Fecha { get; set; }
-    public double Neto { get; set; }
-    public int Iva { get; set; }
+    public int TotalPesos { get; set; }
+    public DateTime Fecha { get; set; }
+    //public decimal Neto { get; set; }
+    //public decimal Iva { get; set; }
+    public long IdLocal { get; set; }
+
     public Local Local { get; set; }
+    public ICollection<VentaDetalle> Detalles { get; set; }
 }

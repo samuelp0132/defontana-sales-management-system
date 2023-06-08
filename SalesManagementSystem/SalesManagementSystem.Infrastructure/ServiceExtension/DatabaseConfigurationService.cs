@@ -12,6 +12,7 @@ public static class DatabaseConfigurationService
             options.UseSqlServer(
                     configuration.GetConnectionString("DB_CONNECTION_STRING"))
                 .EnableSensitiveDataLogging()
-                .EnableDetailedErrors());
+                .EnableDetailedErrors()
+            );
     }
 }

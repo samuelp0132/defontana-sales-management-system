@@ -74,3 +74,5 @@
 /Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/obj/Debug/net6.0/SalesManagementSystem.Application.pdb
 /Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/obj/Debug/net6.0/SalesManagementSystem.Application.genruntimeconfig.cache
 /Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/obj/Debug/net6.0/ref/SalesManagementSystem.Application.dll
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/bin/Debug/net6.0/appsettings.json
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/bin/Debug/net6.0/appsettings.Development.json

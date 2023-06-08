@@ -4,9 +4,12 @@ namespace SalesManagementSystem.Domain.Entities;
 
 public class VentaDetalle : EntidadBase
 {
-    public double PrecioUnitario { get; set; }
+    public long IdVenta { get; set; }
+    public int PrecioUnitario { get; set; }
     public int Cantidad { get; set; }
-    public double TotalLinea { get; set; }
+    public int TotalLinea { get; set; }
+    public long IdProducto { get; set; }
+
     public Venta Venta { get; set; }
     public Producto Producto { get; set; }
 }

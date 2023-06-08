@@ -2,5 +2,5 @@ namespace SalesManagementSystem.Domain.Common;
 
 public class EntidadBase
 {
-    public int id { get; set; }
+    public Int64 Id { get; set; }
 }
