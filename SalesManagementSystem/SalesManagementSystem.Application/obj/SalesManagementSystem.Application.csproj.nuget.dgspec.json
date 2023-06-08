@@ -1,0 +1,240 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/SalesManagementSystem.Application.csproj": {}
+  },
+  "projects": {
+    "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/SalesManagementSystem.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/SalesManagementSystem.Application.csproj",
+        "projectName": "SalesManagementSystem.Application",
+        "projectPath": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/SalesManagementSystem.Application.csproj",
+        "packagesPath": "/Users/samuelperalta/.nuget/packages/",
+        "outputPath": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/samuelperalta/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://ci.appveyor.com/nuget/benchmarkdotnet": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/SalesManagementSystem.Infrastructure.csproj": {
+                "projectPath": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/SalesManagementSystem.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/SalesManagementSystem.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/SalesManagementSystem.Domain.csproj",
+        "projectName": "SalesManagementSystem.Domain",
+        "projectPath": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/SalesManagementSystem.Domain.csproj",
+        "packagesPath": "/Users/samuelperalta/.nuget/packages/",
+        "outputPath": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/samuelperalta/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://ci.appveyor.com/nuget/benchmarkdotnet": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/SalesManagementSystem.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/SalesManagementSystem.Infrastructure.csproj",
+        "projectName": "SalesManagementSystem.Infrastructure",
+        "projectPath": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/SalesManagementSystem.Infrastructure.csproj",
+        "packagesPath": "/Users/samuelperalta/.nuget/packages/",
+        "outputPath": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/samuelperalta/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://ci.appveyor.com/nuget/benchmarkdotnet": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/SalesManagementSystem.Domain.csproj": {
+                "projectPath": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/SalesManagementSystem.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

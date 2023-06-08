@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "NC2a2DaQM+2DLO0EaTNuYvYCjCDvaCMYKAn1sdoH9+eRcnEqoiK89Rk/umRl35ZUIQF681F6coE87HsZnS+Ycw==",
+  "success": true,
+  "projectFilePath": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/SalesManagementSystem.Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/samuelperalta/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "/Users/samuelperalta/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

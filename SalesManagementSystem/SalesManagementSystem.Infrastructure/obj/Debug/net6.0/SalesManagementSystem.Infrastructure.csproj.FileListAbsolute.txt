@@ -1,0 +1,15 @@
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/bin/Debug/net6.0/SalesManagementSystem.Infrastructure.deps.json
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/bin/Debug/net6.0/SalesManagementSystem.Infrastructure.dll
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/bin/Debug/net6.0/SalesManagementSystem.Infrastructure.pdb
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/bin/Debug/net6.0/SalesManagementSystem.Domain.dll
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/bin/Debug/net6.0/SalesManagementSystem.Domain.pdb
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/Debug/net6.0/SalesManagementSystem.Infrastructure.csproj.AssemblyReference.cache
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/Debug/net6.0/SalesManagementSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/Debug/net6.0/SalesManagementSystem.Infrastructure.AssemblyInfoInputs.cache
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/Debug/net6.0/SalesManagementSystem.Infrastructure.AssemblyInfo.cs
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/Debug/net6.0/SalesManagementSystem.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/Debug/net6.0/SalesManagementSystem.Infrastructure.csproj.CopyComplete
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/Debug/net6.0/SalesManagementSystem.Infrastructure.dll
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/Debug/net6.0/refint/SalesManagementSystem.Infrastructure.dll
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/Debug/net6.0/SalesManagementSystem.Infrastructure.pdb
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Infrastructure/obj/Debug/net6.0/ref/SalesManagementSystem.Infrastructure.dll

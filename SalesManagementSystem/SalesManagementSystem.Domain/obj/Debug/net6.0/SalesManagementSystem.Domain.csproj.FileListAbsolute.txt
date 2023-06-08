@@ -1,0 +1,12 @@
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/bin/Debug/net6.0/SalesManagementSystem.Domain.deps.json
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/bin/Debug/net6.0/SalesManagementSystem.Domain.dll
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/bin/Debug/net6.0/SalesManagementSystem.Domain.pdb
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/obj/Debug/net6.0/SalesManagementSystem.Domain.csproj.AssemblyReference.cache
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/obj/Debug/net6.0/SalesManagementSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/obj/Debug/net6.0/SalesManagementSystem.Domain.AssemblyInfoInputs.cache
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/obj/Debug/net6.0/SalesManagementSystem.Domain.AssemblyInfo.cs
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/obj/Debug/net6.0/SalesManagementSystem.Domain.csproj.CoreCompileInputs.cache
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/obj/Debug/net6.0/SalesManagementSystem.Domain.dll
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/obj/Debug/net6.0/refint/SalesManagementSystem.Domain.dll
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/obj/Debug/net6.0/SalesManagementSystem.Domain.pdb
+/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Domain/obj/Debug/net6.0/ref/SalesManagementSystem.Domain.dll

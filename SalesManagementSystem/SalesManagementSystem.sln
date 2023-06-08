@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesManagementSystem.Application", "SalesManagementSystem.Application\SalesManagementSystem.Application.csproj", "{8723FDF5-FC17-4FA9-94A3-FB451444458D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesManagementSystem.Domain", "SalesManagementSystem.Domain\SalesManagementSystem.Domain.csproj", "{B4D47396-16E0-4BFF-9FCA-4C6E74D04A9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesManagementSystem.Infrastructure", "SalesManagementSystem.Infrastructure\SalesManagementSystem.Infrastructure.csproj", "{7991DC8F-5EB9-49B8-8355-189556A178B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8723FDF5-FC17-4FA9-94A3-FB451444458D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8723FDF5-FC17-4FA9-94A3-FB451444458D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8723FDF5-FC17-4FA9-94A3-FB451444458D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8723FDF5-FC17-4FA9-94A3-FB451444458D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4D47396-16E0-4BFF-9FCA-4C6E74D04A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4D47396-16E0-4BFF-9FCA-4C6E74D04A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4D47396-16E0-4BFF-9FCA-4C6E74D04A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4D47396-16E0-4BFF-9FCA-4C6E74D04A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7991DC8F-5EB9-49B8-8355-189556A178B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7991DC8F-5EB9-49B8-8355-189556A178B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7991DC8F-5EB9-49B8-8355-189556A178B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7991DC8F-5EB9-49B8-8355-189556A178B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
