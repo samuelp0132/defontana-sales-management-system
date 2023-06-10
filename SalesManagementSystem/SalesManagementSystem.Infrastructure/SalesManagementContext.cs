@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using SalesManagementSystem.Domain.Entities;
 using SalesManagementSystem.Infrastructure.EntitiesSettings.Local;
 using SalesManagementSystem.Infrastructure.EntitiesSettings.Marca;
@@ -19,7 +20,7 @@ public class SalesManagementContext : DbContext
     {
         
     }
-
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {   
         VentaSetting.SetEntityProperty(modelBuilder.Entity<Venta>());

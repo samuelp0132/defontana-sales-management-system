@@ -4,7 +4,7 @@ namespace SalesManagementSystem.Domain.Entities;
 
 public class Venta : EntidadBase
 {
-    public int TotalPesos { get; set; }
+    public int Total { get; set; }
     public DateTime Fecha { get; set; }
     //public decimal Neto { get; set; }
     //public decimal Iva { get; set; }

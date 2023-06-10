@@ -14,6 +14,14 @@ public class SalesService : ISalesService
     }
     public async Task<IEnumerable<VentaDetalle>> GetSalesAsync(CancellationToken cancellationToken = default)
     {
-        return await _unitOfWork.VentaDetalleRepository.GetAll(includeProperties: $"{nameof(Producto)}.{nameof(Marca)},{nameof(Producto)},{nameof(Venta)},{nameof(Venta)}.{nameof(Local)}");
+        // Set date range
+        DateTimeOffset startDate = DateTimeOffset.Now.AddDays(-30);
+        DateTimeOffset endDate = DateTimeOffset.Now;
+        
+        return await _unitOfWork.VentaDetalleRepository.GetAll(
+            orderBy: q => q.OrderByDescending(c => c.Id),
+            filter: v => v.Venta.Fecha >= startDate && v.Venta.Fecha <= endDate,
+            includeProperties: $"{nameof(Producto)}.{nameof(Marca)},{nameof(Producto)},{nameof(Venta)},{nameof(Venta)}.{nameof(Local)}"
+            );
     }
 }

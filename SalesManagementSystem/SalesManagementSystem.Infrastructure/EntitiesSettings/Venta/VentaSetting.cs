@@ -10,7 +10,7 @@ public class VentaSetting
         entity.ToTable("Venta");
         entity.HasKey(e => e.Id);
         entity.Property(e => e.Id).HasColumnName("ID_Venta");
-        entity.Property(e => e.TotalPesos).HasColumnName("Total");
+        entity.Property(e => e.Total).HasColumnName("Total");
         entity.Property(e => e.Fecha).HasColumnName("Fecha");
         entity.Property(e => e.IdLocal).HasColumnName("ID_Local");
         entity
