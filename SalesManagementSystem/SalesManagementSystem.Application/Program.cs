@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SalesManagementSystem.Application.Common.Utils;
 using SalesManagementSystem.Application.Sales.Interfaces;
 using SalesManagementSystem.Application.Sales.Services;
 using SalesManagementSystem.Infrastructure.CrossCutting;
@@ -63,41 +64,36 @@ var totalLocalSalesAmount = locationWithHighestSales.TotalSalesAmount;
 
 // Find the brand with the highest profit margin
 var brandWithHighestProfitMargin = salesLast30Days
-    .GroupJoin(
-        salesLast30Days,
-        producto => producto.IdProducto,
-        ventaDetalle => ventaDetalle.IdProducto,
-        (producto, ventaDetalles) => new
-        {
-            Marca = producto.Producto.Marca,
-            CostoTotal = ventaDetalles.Sum(vd => vd.PrecioUnitario),
-            VentasTotal = ventaDetalles.Sum(vd => vd.PrecioUnitario * vd.Cantidad)
-        })
-    .Select(x => new
+    .GroupBy(s => s.Producto.Marca)
+    .Select(g => new
     {
-        x.Marca,
-        MargenGanancias = (decimal)(x.VentasTotal - x.CostoTotal) / x.VentasTotal
-    }).MaxBy(x => x.MargenGanancias);
+        Brand = g.Key,
+        AverageProfitMargin = g.Average(s => (decimal)((s.PrecioUnitario * s.Cantidad) - s.Producto.CostoUnitario) / (s.PrecioUnitario * s.Cantidad)) * 100
+    })
+    .ToList();
 
-var brandName = brandWithHighestProfitMargin.Marca.Nombre;
-var profitMargin = brandWithHighestProfitMargin.MargenGanancias;
+var brandWithHighestMargin = brandWithHighestProfitMargin.OrderByDescending(b => b.AverageProfitMargin).FirstOrDefault();
+
+
+var brandName = brandWithHighestMargin.Brand.Nombre;
+var profitMargin = brandWithHighestMargin.AverageProfitMargin;
 
 // Find the top-selling products by local
 var topSellingProductsByLocal = salesLast30Days
-    .GroupBy(vd => vd.Venta.Local)
+    .GroupBy(vd => new {vd.Venta.Local.Nombre, vd.Venta.Total})
     .Select(group => new
     {
         Local = group.Key,
-        TopSellingProduct = group.OrderByDescending(vd => vd.Cantidad).FirstOrDefault()?.Producto
+        TopSellingProduct = group.MaxBy(vd => vd.Venta.Total)?.Producto
     });
 
-// Output the results
-Console.WriteLine($"Monto total del mes: {totalSales}, Cantidad Total : {quantityTotalSales}");
-Console.WriteLine($"Fecha venta mas alta: {dateTimeOfSale}, Monto : {highestAmount}");
-Console.WriteLine($"Producto con mas venta: {productName}, Monto : {totalSalesAmount}");
-Console.WriteLine($"Local con mas ventas : {localName}, Ventas : {totalLocalSalesAmount}");
-Console.WriteLine($"Marca con mayor margen de ganancias : {brandName}, Profit : {profitMargin}");
+ // Output the results
+Console.WriteLine($"Monto total del mes: {CurrencyConverter.ConvertToCurrencyString(totalSales)}, Cantidad Total : {CurrencyConverter.ConvertToCurrencyString(quantityTotalSales)}");
+Console.WriteLine($"Fecha venta mas alta: {dateTimeOfSale}, Monto : {CurrencyConverter.ConvertToCurrencyString(highestAmount)}");
+Console.WriteLine($"Producto con mas venta: {productName}, Monto : {CurrencyConverter.ConvertToCurrencyString(totalSalesAmount)}");
+Console.WriteLine($"Local con mas ventas : {localName}, Ventas : {CurrencyConverter.ConvertToCurrencyString(totalLocalSalesAmount)}");
+Console.WriteLine($"Marca con mayor margen de ganancias : {brandName}, Margen : {profitMargin}");
 foreach (var product in topSellingProductsByLocal)
 {
-    Console.WriteLine($"Producto: {product.TopSellingProduct.Nombre}, Local: {product.Local.Nombre}, Costo: {product.TopSellingProduct.CostoUnitario}");
+    Console.WriteLine($"Producto: {product.TopSellingProduct.Nombre}, Local: {product.Local.Nombre}, Costo: {CurrencyConverter.ConvertToCurrencyString(product.TopSellingProduct.CostoUnitario)}");
 }
