@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "co/lMMRuhPEYqI4e7zGmZenpKnquvonKPb0Np1pDTbX+fLrZu2M0Btx/9/RRcF0MzKfMw1gApMRXrJwSNUJZ+g==",
+  "dgSpecHash": "vlQ8R7HfIFIb8mEycfK+Kj7hcaf6MDxCx0CCbrygcth1uKbMQO6pdBzGmoD8JTN6IkvR3FYVqx9RQI7adR98aA==",
   "success": true,
   "projectFilePath": "/Users/samuelperalta/Documents/repos/defontana-sales-management-system/SalesManagementSystem/SalesManagementSystem.Application/SalesManagementSystem.Application.csproj",
   "expectedPackageFiles": [
@@ -71,7 +71,10 @@
     "/Users/samuelperalta/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
     "/Users/samuelperalta/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/samuelperalta/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "/Users/samuelperalta/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512"
+    "/Users/samuelperalta/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512",
+    "/Users/samuelperalta/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "/Users/samuelperalta/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
+    "/Users/samuelperalta/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.11/microsoft.netcore.app.host.osx-x64.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }

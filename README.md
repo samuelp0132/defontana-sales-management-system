@@ -17,6 +17,13 @@ Estructurado basado en la arquitectura 'Clean Architecture'.
 dotnet run --project SalesManagementSystem/SalesManagementSystem.Application
 ```
 
+### Setup Docker
+1. Clonar el repositorio
+2. Situarse en la raiz del directorio, y ejecutar
+```
+docker compose up -d
+```
+
 
 ### Queries SQL
 1. El total de ventas de los últimos 30 días (monto total y cantidad total de ventas).
