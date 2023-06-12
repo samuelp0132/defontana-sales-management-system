@@ -84,7 +84,7 @@ ORDER BY
 
 5. ¿Cuál es la marca con mayor margen de ganancias?
 ```
-SELECT TOP 1 WITH TIES
+SELECT TOP 1
     M.ID_Marca AS BrandID,
     M.Nombre AS BrandName,
     AVG(((VD.Precio_Unitario * VD.Cantidad) - CAST(P.Costo_Unitario AS DECIMAL(18, 2))) / (VD.Precio_Unitario * VD.Cantidad)) * 100 AS AverageProfitMargin
