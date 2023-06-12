@@ -30,10 +30,10 @@ docker compose up -d
 ```
 SELECT 
     SUM(TotalLinea) as MontoTotal,
-    SUM(Cantidad)
-FROM VentaDetalle s
-INNER JOIN 
-    Venta v ON s.ID_Venta = v.ID_Venta
+    SUM(Cantidad) as CantidadTotal
+FROM 
+    VentaDetalle s
+INNER JOIN Venta v ON s.ID_Venta = v.ID_Venta
 WHERE 
     V.Fecha >= DATEADD(DAY, -30, GETDATE()) AND V.Fecha <= GETDATE()
 ```
@@ -41,9 +41,10 @@ WHERE
 2. El día y hora en que se realizó la venta con el monto más alto (y cuál es aquel monto).
 ```
 SELECT TOP 1 
-    V.Fecha AS Fecha, 
-    V.Total AS HighestAmount
-FROM Venta AS V
+    V.Fecha AS Fecha,
+    V.Total AS MontoMasAlto
+FROM 
+    Venta AS V
 WHERE 
     V.Fecha >= DATEADD(DAY, -30, GETDATE()) AND V.Fecha <= GETDATE()
 ORDER BY 
@@ -52,12 +53,13 @@ ORDER BY
 
 3. Indicar cuál es el producto con mayor monto total de ventas.
 ```
-SELECT 
-    P.Nombre AS ProductName, 
-    SUM(VD.TotalLinea) AS TotalSalesAmount
-FROM VentaDetalle AS VD
-    JOIN Producto AS P ON VD.ID_Producto = P.ID_Producto
-    JOIN Venta AS V ON VD.ID_Venta = V.ID_Venta
+SELECT TOP 1 
+    P.Nombre AS NombreProducto,
+    SUM(VD.TotalLinea) AS TotalMontoVentas
+FROM 
+    VentaDetalle AS VD
+JOIN Producto AS P ON VD.ID_Producto = P.ID_Producto
+JOIN Venta AS V ON VD.ID_Venta = V.ID_Venta
 WHERE 
     V.Fecha >= DATEADD(DAY, -30, GETDATE()) AND V.Fecha <= GETDATE()
 GROUP BY 
@@ -69,15 +71,16 @@ ORDER BY
 4. Indicar el local con mayor monto de ventas.
 ```
 SELECT TOP 1 
-    L.Nombre AS LocationName,
-    SUM(V.Total) AS TotalSalesAmount
-FROM Venta AS V
-    JOIN Local AS L ON V.ID_Local = L.ID_Local
-    JOIN VentaDetalle as VD ON VD.ID_Venta = V.ID_Venta
+    L.Nombre AS NombreLocal,
+    SUM(V.Total) AS TotalMontoVentas
+FROM 
+    Venta AS V
+JOIN Local AS L ON V.ID_Local = L.ID_Local
+JOIN VentaDetalle as VD ON VD.ID_Venta = V.ID_Venta
 WHERE 
     V.Fecha >= DATEADD(DAY, -30, GETDATE()) AND V.Fecha <= GETDATE()
-GROUP BY 
-    L.Nombre
+GROUP BY
+     L.Nombre
 ORDER BY 
     SUM(V.Total) DESC;
 ```
@@ -85,10 +88,11 @@ ORDER BY
 5. ¿Cuál es la marca con mayor margen de ganancias?
 ```
 SELECT TOP 1
-    M.ID_Marca AS BrandID,
-    M.Nombre AS BrandName,
-    AVG(((VD.Precio_Unitario * VD.Cantidad) - CAST(P.Costo_Unitario AS DECIMAL(18, 2))) / (VD.Precio_Unitario * VD.Cantidad)) * 100 AS AverageProfitMargin
-FROM VentaDetalle VD
+    M.ID_Marca AS MarcaID,
+    M.Nombre AS MarcaNombre,
+    AVG(((VD.Precio_Unitario * VD.Cantidad) - CAST(P.Costo_Unitario AS DECIMAL(18, 2))) / (VD.Precio_Unitario * VD.Cantidad)) * 100 AS GananciaPromedio
+FROM
+    VentaDetalle VD
     INNER JOIN Producto P ON VD.ID_Producto = P.ID_Producto
     INNER JOIN Marca M ON P.ID_Marca = M.ID_Marca
     INNER JOIN Venta V ON VD.ID_Venta = V.ID_Venta
@@ -98,12 +102,15 @@ GROUP BY
     M.ID_Marca,
     M.Nombre
 ORDER BY
-	AverageProfitMargin DESC
+	GananciaPromedio DESC
 ```
 
 6. ¿Cómo obtendrías cuál es el producto que más se vende en cada local?
 ```
-SELECT NombreLocal, NombreProducto, cantidad
+SELECT
+    NombreLocal,
+    NombreProducto,
+    cantidad
 FROM (
     SELECT L.Nombre AS NombreLocal, P.Nombre AS NombreProducto, SUM(VD.Cantidad) AS cantidad,
         ROW_NUMBER() OVER (PARTITION BY L.ID_Local ORDER BY SUM(VD.Cantidad) DESC) AS Rank
