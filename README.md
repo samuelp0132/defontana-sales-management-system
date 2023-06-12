@@ -12,19 +12,10 @@ Estructurado basado en la arquitectura 'Clean Architecture'.
 
 ### Setup
 1. Clonar el repositorio
-2. Situarse en la raiz del directorio, y construir imagen Docker
+2. Situarse en la raiz del directorio, y ejecutar
 ```
-docker build -t gestion-radicacion-reclamacion -f Dockerfile .
+dotnet run --project SalesManagementSystem/SalesManagementSystem.Application
 ```
-3. Correr imagen
-```
-docker run -dp 5001:80
--e CONNECTION_STRING="<Aqui va cadena de Conexión Infoplan>"
---name gestion-radicacion-reclamacion 
-gestion-radicacion-reclamacion
-```
-
-4. Ir al navegador con el host y puerto en que está corriendo el proyecto; deberá visualizarse UI de Swagger.
 
 
 ### Queries SQL
@@ -70,11 +61,12 @@ ORDER BY
 
 4. Indicar el local con mayor monto de ventas.
 ```
-SELECT TOP 1 
-    L.Nombre AS LocationName, 
+SELECT 
+    L.Nombre AS LocationName,
     SUM(V.Total) AS TotalSalesAmount
 FROM Venta AS V
     JOIN Local AS L ON V.ID_Local = L.ID_Local
+    JOIN VentaDetalle as VD ON VD.ID_Venta = V.ID_Venta
 WHERE 
     V.Fecha >= DATEADD(DAY, -30, GETDATE()) AND V.Fecha <= GETDATE()
 GROUP BY 
