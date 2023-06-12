@@ -25,7 +25,7 @@ services.AddTransient<ISalesService, SalesService>();
 var serviceProvider = services.BuildServiceProvider();
 var SalesService = serviceProvider.GetRequiredService<ISalesService>();
 
-// Get sales data
+// Get sales of last 30 days
 var salesLast30Days = await SalesService.GetSalesAsync();
 
 // Calculate total sales amount and quantity
@@ -78,7 +78,7 @@ var brandWithHighestMargin = brandWithHighestProfitMargin.OrderByDescending(b =>
 var brandName = brandWithHighestMargin.Brand.Nombre;
 var profitMargin = brandWithHighestMargin.AverageProfitMargin;
 
-// Find the top-selling products by local
+/* Find the top-selling products by local
 var topSellingProductsByLocal = salesLast30Days
     .GroupBy(vd => new {vd.Venta.Local.Nombre, vd.Venta.Total})
     .Select(group => new
@@ -86,6 +86,22 @@ var topSellingProductsByLocal = salesLast30Days
         Local = group.Key,
         TopSellingProduct = group.MaxBy(vd => vd.Venta.Total)?.Producto
     });
+*/
+var topSellingProductsByLocal = salesLast30Days
+    .GroupBy(sale => sale.Venta.Local)
+    .Select(group => new
+    {
+        Local = group.Key,
+        TopSellingProduct = group.GroupBy(sale => sale.IdProducto)
+            .Select(productGroup => new
+            {
+                Product = productGroup.First().Producto,
+                TotalQuantitySold = productGroup.Sum(sale => sale.Cantidad)
+            }).MaxBy(productGroup => productGroup.TotalQuantitySold)?.Product
+    })
+    .ToList();
+
+
 
  // Output the results
 Console.WriteLine($"Monto total del mes: {CurrencyConverter.ConvertToCurrencyString(totalSales)}, Cantidad Total : {CurrencyConverter.ConvertToCurrencyString(quantityTotalSales)}");

@@ -7,6 +7,11 @@ namespace SalesManagementSystem.Infrastructure.ServiceExtension;
 
 public static class DatabaseConfigurationService
 {
+    /// <summary>
+    /// Adds database services to the IServiceCollection.
+    /// </summary>
+    /// <param name="services">The IServiceCollection instance.</param>
+    /// <param name="configuration">The IConfiguration instance used to retrieve the database connection string.</param>
     public static void AddDatabaseServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContextPool<SalesManagementContext>(options =>
