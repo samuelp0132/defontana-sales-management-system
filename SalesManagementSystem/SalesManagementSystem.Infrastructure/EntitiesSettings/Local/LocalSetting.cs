@@ -5,6 +5,10 @@ namespace SalesManagementSystem.Infrastructure.EntitiesSettings.Local;
 
 public class LocalSetting
 {
+    protected LocalSetting()
+    {
+        
+    }
     public static void SetEntityProperty(EntityTypeBuilder<Domain.Entities.Local> entity)
     {
         entity.ToTable("Local");

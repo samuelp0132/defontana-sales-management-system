@@ -5,6 +5,10 @@ namespace SalesManagementSystem.Infrastructure.EntitiesSettings.Venta;
 
 public class VentaSetting
 {
+    protected VentaSetting()
+    {
+        
+    }
     public static void SetEntityProperty(EntityTypeBuilder<Domain.Entities.Venta> entity)
     {
         entity.ToTable("Venta");

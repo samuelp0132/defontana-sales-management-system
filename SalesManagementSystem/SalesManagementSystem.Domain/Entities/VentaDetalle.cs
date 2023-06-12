@@ -10,6 +10,6 @@ public class VentaDetalle : EntidadBase
     public int TotalLinea { get; set; }
     public long IdProducto { get; set; }
 
-    public Venta Venta { get; set; }
-    public Producto Producto { get; set; }
+    public Venta? Venta { get; set; }
+    public Producto? Producto { get; set; }
 }

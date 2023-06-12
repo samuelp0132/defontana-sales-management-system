@@ -8,6 +8,6 @@ public class Venta : EntidadBase
     public DateTime Fecha { get; set; }
     public long IdLocal { get; set; }
 
-    public Local Local { get; set; }
-    public ICollection<VentaDetalle> Detalles { get; set; }
+    public Local? Local { get; set; }
+    public ICollection<VentaDetalle>? Detalles { get; set; }
 }

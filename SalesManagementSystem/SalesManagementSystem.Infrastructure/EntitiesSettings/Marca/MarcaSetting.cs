@@ -5,6 +5,10 @@ namespace SalesManagementSystem.Infrastructure.EntitiesSettings.Marca;
 
 public class MarcaSetting
 {
+    protected MarcaSetting()
+    {
+        
+    }
     public static void SetEntityProperty(EntityTypeBuilder<Domain.Entities.Marca> entity)
     {
         entity.ToTable("Marca");

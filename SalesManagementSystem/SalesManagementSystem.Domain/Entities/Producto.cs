@@ -10,7 +10,7 @@ public class Producto : EntidadBase
     
     public long IdMarca { get; set; }
     public int CostoUnitario { get; set; }
-    public Marca Marca { get; set; }
-    public ICollection<VentaDetalle> Detalles { get; set; }
+    public Marca? Marca { get; set; }
+    public ICollection<VentaDetalle>? Detalles { get; set; }
     
 }

@@ -5,6 +5,10 @@ namespace SalesManagementSystem.Infrastructure.EntitiesSettings.Producto;
 
 public class ProductoSetting
 {
+    protected ProductoSetting()
+    {
+        
+    }
     public static void SetEntityProperty(EntityTypeBuilder<Domain.Entities.Producto> entity)
     {
         entity.ToTable("Producto");
