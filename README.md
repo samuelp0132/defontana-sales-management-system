@@ -61,7 +61,7 @@ ORDER BY
 
 4. Indicar el local con mayor monto de ventas.
 ```
-SELECT 
+SELECT TOP 1 
     L.Nombre AS LocationName,
     SUM(V.Total) AS TotalSalesAmount
 FROM Venta AS V
@@ -81,8 +81,7 @@ SELECT TOP 1 WITH TIES
     M.ID_Marca AS BrandID,
     M.Nombre AS BrandName,
     AVG(((VD.Precio_Unitario * VD.Cantidad) - CAST(P.Costo_Unitario AS DECIMAL(18, 2))) / (VD.Precio_Unitario * VD.Cantidad)) * 100 AS AverageProfitMargin
-FROM
-    VentaDetalle VD
+FROM VentaDetalle VD
     INNER JOIN Producto P ON VD.ID_Producto = P.ID_Producto
     INNER JOIN Marca M ON P.ID_Marca = M.ID_Marca
     INNER JOIN Venta V ON VD.ID_Venta = V.ID_Venta
@@ -93,6 +92,23 @@ GROUP BY
     M.Nombre
 ORDER BY
 	AverageProfitMargin DESC
+```
+
+6. ¿Cómo obtendrías cuál es el producto que más se vende en cada local?
+```
+SELECT NombreLocal, NombreProducto, cantidad
+FROM (
+    SELECT L.Nombre AS NombreLocal, P.Nombre AS NombreProducto, SUM(VD.Cantidad) AS cantidad,
+        ROW_NUMBER() OVER (PARTITION BY L.ID_Local ORDER BY SUM(VD.Cantidad) DESC) AS Rank
+    FROM Local L
+    JOIN Venta V ON L.ID_Local = V.ID_Local
+    JOIN VentaDetalle VD ON V.ID_Venta = VD.ID_Venta
+    JOIN Producto P ON VD.ID_Producto = P.ID_Producto
+    WHERE V.Fecha >= DATEADD(DAY, -30, GETDATE()) AND V.Fecha <= GETDATE()
+    GROUP BY L.ID_Local, L.Nombre, P.Nombre
+) AS Subquery
+WHERE Rank = 1
+ORDER BY NombreLocal;
 ```
 
 ## Arquitectura

@@ -13,5 +13,5 @@ public interface ISalesService
     ProductSalesResultDto GetProductWithHighestTotalSales(IEnumerable<VentaDetalle> sales);
     LocationSalesResultDto GetLocationWithHighestSales(IEnumerable<VentaDetalle> sales);
     BrandProfitMarginResultDto GetBrandWithHighestProfitMargin(IEnumerable<VentaDetalle> sales);
-    //List<TopSellingProductByLocal> GetTopSellingProductsByLocal(IEnumerable<VentaDetalle> sales);
+    List<TopSellingProductResultDto> GetTopSellingProductsByLocal(IEnumerable<VentaDetalle> sales);
 }

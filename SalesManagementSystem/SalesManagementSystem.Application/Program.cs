@@ -33,7 +33,7 @@ var highestSale = SalesService.GetHighestAmountSale(sales);
 var ProductWithHighestTotalSales = SalesService.GetProductWithHighestTotalSales(sales);
 var LocationWithHighestSales = SalesService.GetLocationWithHighestSales(sales);
 var BrandWithHighestProfitMargin = SalesService.GetBrandWithHighestProfitMargin(sales);
-//var TopSellingProductsByLocal = SalesService.GetTopSellingProductsByLocal(salesLast30Days);
+var TopSellingProductsByLocal = SalesService.GetTopSellingProductsByLocal(sales);
 
 
 // Output the results
@@ -42,7 +42,7 @@ Console.WriteLine($"Fecha venta mas alta: {highestSale.DateTimeOfSale}, Monto : 
 Console.WriteLine($"Producto con mas venta: {ProductWithHighestTotalSales.ProductName}, Monto : {CurrencyConverter.ConvertToCurrencyString(ProductWithHighestTotalSales.TotalSalesAmount)}");
 Console.WriteLine($"Local con mas ventas : {LocationWithHighestSales.LocationName}, Ventas : {CurrencyConverter.ConvertToCurrencyString(LocationWithHighestSales.TotalSalesAmount)}");
 Console.WriteLine($"Marca con mayor margen de ganancias : {BrandWithHighestProfitMargin.BrandName}, Margen : {BrandWithHighestProfitMargin.AverageProfitMargin}");
-/*foreach (var product in TopSellingProductsByLocal)
+foreach (var product in TopSellingProductsByLocal)
 {
-    Console.WriteLine($"Producto: {product.TopSellingProduct.Nombre}, Local: {product.Local.Nombre}, Costo: {CurrencyConverter.ConvertToCurrencyString(product.TopSellingProduct.CostoUnitario)}");
-}*/
+    Console.WriteLine($"Producto: {product.ProductName}, Local: {product.LocalName}, Cantidad : {CurrencyConverter.ConvertToCurrencyString(product.TotalQuantitySold)}");
+}
